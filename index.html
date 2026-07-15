@@ -1,211 +1,281 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Политика конфиденциальности - TheVuntgram</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #ffffff;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 28px;
-        }
-        
-        h2 {
-            color: #34495e;
-            margin: 25px 0 15px 0;
-            font-size: 20px;
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 5px;
-        }
-        
-        h3 {
-            color: #2c3e50;
-            margin: 20px 0 10px 0;
-            font-size: 16px;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-        
-        ul {
-            margin: 15px 0;
-            padding-left: 30px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        .highlight {
-            background-color: #e8f5e8;
-            padding: 15px;
-            border-left: 4px solid #27ae60;
-            margin: 20px 0;
-        }
-        
-        .warning {
-            background-color: #ffeaa7;
-            padding: 15px;
-            border-left: 4px solid #fdcb6e;
-            margin: 20px 0;
-        }
-        
-        .date {
-            text-align: right;
-            color: #7f8c8d;
-            font-style: italic;
-            margin-top: 30px;
-        }
-        
-        .back-button {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        
-        .back-button:hover {
-            background: #2980b9;
-        }
-        
-        .contact-info {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Политика конфиденциальности — TheVuntgram</title>
+<style>
+    :root {
+        --bg: #0f1117;
+        --card: #171a23;
+        --accent: #6c8cff;
+        --accent-soft: rgba(108, 140, 255, 0.12);
+        --text: #e6e8ef;
+        --text-muted: #9aa0b4;
+        --border: #262a38;
+        --highlight-bg: #1e2a3a;
+        --highlight-border: #4d8dff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        padding: 40px 20px;
+    }
+
+    .wrapper {
+        max-width: 820px;
+        margin: 0 auto;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .logo {
+        display: inline-block;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--accent);
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+    }
+
+    header p {
+        color: var(--text-muted);
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 36px 40px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        color: var(--text-muted);
+        font-size: 14px;
+        margin-bottom: 32px;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+        color: var(--accent);
+        margin-top: 36px;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    h2 .num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 28px;
+        height: 28px;
+        background: var(--accent-soft);
+        border-radius: 8px;
+        font-size: 14px;
+        color: var(--accent);
+    }
+
+    p, li {
+        font-size: 15.5px;
+        color: var(--text);
+    }
+
+    ul {
+        padding-left: 22px;
+        margin: 12px 0;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    .highlight {
+        background: var(--highlight-bg);
+        border-left: 4px solid var(--highlight-border);
+        padding: 16px 20px;
+        border-radius: 8px;
+        margin: 18px 0;
+        font-weight: 600;
+    }
+
+    .highlight strong {
+        color: #7fb0ff;
+    }
+
+    .no-collect {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin: 16px 0;
+    }
+
+    .pill {
+        background: var(--accent-soft);
+        border: 1px solid rgba(108,140,255,0.35);
+        color: #a9c0ff;
+        padding: 8px 16px;
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .pill::before {
+        content: "✕ ";
+        color: #ff8585;
+        font-weight: 700;
+    }
+
+    .security-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin: 16px 0;
+    }
+
+    .security-item {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 16px 18px;
+    }
+
+    .security-item .title {
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 6px;
+        font-size: 15px;
+    }
+
+    .security-item .desc {
+        color: var(--text-muted);
+        font-size: 14px;
+        margin: 0;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 30px;
+        color: var(--text-muted);
+        font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+        .card { padding: 26px 22px; }
+        .security-grid { grid-template-columns: 1fr; }
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h1>
-        
+<div class="wrapper">
+
+    <header>
+        <div class="logo">TheVuntgram</div>
+        <p>Частная социальная сеть для учащихся школ, гимназий и лицеев</p>
+    </header>
+
+    <div class="card">
+        <h1>Политика конфиденциальности</h1>
+        <p class="subtitle">
+            Настоящий документ описывает, какие данные обрабатываются на платформе TheVuntgram
+            и каким образом обеспечивается их защита.
+        </p>
+
+        <h2><span class="num">1</span>Общие положения</h2>
+        <p>
+            TheVuntgram — закрытая социальная платформа, созданная для общения учащихся
+            общеобразовательных школ, гимназий, лицеев и других учебных заведений. Платформа
+            разрабатывалась с приоритетом на конфиденциальность и безопасность данных
+            несовершеннолетних и совершеннолетних пользователей из числа учащихся.
+        </p>
+
+        <h2><span class="num">2</span>Какие данные мы <u>не</u> собираем</h2>
+        <p>
+            При регистрации на платформе TheVuntgram <strong>не запрашиваются и не хранятся</strong>
+            следующие персональные данные:
+        </p>
+        <div class="no-collect">
+            <span class="pill">Адрес электронной почты</span>
+            <span class="pill">Номер телефона</span>
+        </div>
+        <p>
+            Регистрация построена таким образом, чтобы свести объём личных контактных данных,
+            попадающих на сервер, к минимуму.
+        </p>
+
+        <h2><span class="num">3</span>Какие данные обрабатываются</h2>
+        <p>При использовании платформы обрабатываются следующие категории данных:</p>
+        <ul>
+            <li>Виртуальные данные, автоматически формируемые системой при регистрации аккаунта (внутренние идентификаторы, служебные метки профиля);</li>
+            <li>Сообщения, которыми пользователь обменивается в рамках платформы;</li>
+            <li>Прочие данные о взаимодействии пользователя с платформой (активность внутри приложения, настройки профиля и т. п.).</li>
+        </ul>
+
         <div class="highlight">
-            <p><strong>Дата вступления в силу:</strong> 12 августа 2025 года</p>
-            <p>Настоящая Политика конфиденциальности описывает, как TheVuntgram собирает, использует и защищает вашу личную информацию.</p>
+            <strong>Важно:</strong> ни виртуальные данные, автоматически создаваемые при регистрации,
+            ни сообщения пользователей, ни любые другие данные о пользователе
+            <strong>не передаются третьим лицам</strong> ни при каких обстоятельствах.
         </div>
 
-        <h2>1. Обработка данных</h2>
-        <p><strong>Цели обработки:</strong></p>
-        <ul>
-            <li>Идентификация пользователя в рамках школьного сообщества</li>
-            <li>Организация образовательного процесса</li>
-            <li>Обеспечение безопасной среды общения</li>
-            <li>Техническая поддержка платформы</li>
-            <li>Развитие и улучшение функционала платформы</li>
-        </ul>
-
-        <h2>2. Защита данных</h2>
-        <p><strong>Меры безопасности:</strong></p>
-        <ul>
-            <li>Хеширование паролей</li>
-            <li>Ограниченный доступ к базе данных</li>
-            <li>Шифрование передаваемых данных по протоколу HTTPS</li>
-            <li>Регулярные проверки безопасности</li>
-        </ul>
-
-        <h2>3. Хранение данных</h2>
-        <p><strong>Сроки хранения:</strong></p>
-        <ul>
-            <li>Данные хранятся до момента удаления аккаунта</li>
-            <li>При удалении аккаунта все персональные данные удаляются безвозвратно</li>
-
-        </ul>
-
-        <h2>4. Передача данных</h2>
-        <div class="highlight">
-            <p><strong>Платформа НЕ передает:</strong></p>
-            <ul>
-                <li>Данные третьим лицам</li>
-                <li>Рекламным сетям</li>
-                <li>Коммерческим организациям</li>
-                <li>Маркетинговым агентствам</li>
-            </ul>
+        <h2><span class="num">4</span>Меры защиты данных</h2>
+        <p>Для обеспечения безопасности пользовательских данных на платформе применяются следующие меры:</p>
+        <div class="security-grid">
+            <div class="security-item">
+                <div class="title">🔒 Шифрование данных</div>
+                <p class="desc">Данные пользователей защищены шифрованием как при хранении, так и при передаче внутри системы.</p>
+            </div>
+            <div class="security-item">
+                <div class="title">🛡️ Регулярные проверки безопасности</div>
+                <p class="desc">Платформа регулярно проходит проверки безопасности для своевременного выявления и устранения уязвимостей.</p>
+            </div>
         </div>
 
-        <div class="warning">
-            <p><strong>Исключения:</strong></p>
-            <ul>
-                <li>По требованию правоохранительных органов в установленном законом порядке</li>
-                <li>Для обеспечения безопасности платформы и пользователей</li>
-                <li>При смене владельца платформы (с обязательным уведомлением пользователей)</li>
-            </ul>
-        </div>
+        <h2><span class="num">5</span>Кто имеет доступ к данным</h2>
+        <p>
+            Доступ к данным пользователей ограничен исключительно техническими процессами,
+            необходимыми для работы платформы. Передача данных сторонним компаниям, рекламным
+            сетям, аналитическим сервисам или иным третьим лицам <strong>не осуществляется</strong>.
+        </p>
 
-        <h2>5. Права пользователей</h2>
-        <p><strong>Каждый пользователь имеет право:</strong></p>
-        <ul>
-            <li>На доступ к своим данным</li>
-            <li>На исправление неточной информации</li>
-            <li>На удаление аккаунта и всех данных</li>
-            <li>На получение информации о хранимых данных</li>
-            <li>На ограничение обработки данных</li>
-        </ul>
+        <h2><span class="num">6</span>Изменения политики</h2>
+        <p>
+            Поскольку проект TheVuntgram находится на стадии разработки и не зарегистрирован
+            официально, данная политика конфиденциальности может дополняться и уточняться по мере
+            развития платформы. Актуальная версия документа всегда доступна пользователям
+            внутри приложения.
+        </p>
 
-        <h2>6. Особые положения для несовершеннолетних</h2>
-        
-        <h3>Для пользователей до 14 лет:</h3>
-        <ul>
-            <li>Родители могут запросить полную информацию о данных ребенка</li>
-            <li>Родители могут потребовать удаления аккаунта ребенка</li>
-        </ul>
-
-        <h3>Для пользователей от 14 до 18 лет:</h3>
-        <ul>
-            <li>Пользователь самостоятельно управляет своими данными</li>
-            <li>Родители могут обратиться для получения информации об активности</li>
-            <li>Обеспечивается повышенный уровень модерации</li>
-        </ul>
-
-        <h2>7. Использование файлов cookie</h2>
-        <p>Платформа использует только технические cookie, необходимые для:</p>
-        <ul>
-            <li>Аутентификации пользователей</li>
-            <li>Сохранения настроек сессии</li>
-            <li>Обеспечения безопасности</li>
-            <li>Анализа производительности платформы</li>
-        </ul>
-
-        <h2>8. Международная передача данных</h2>
-        <p>Все данные пользователей хранятся и обрабатываются на территории страны регистрации платформы. Международная передача данных не осуществляется.</p>
-
-
-        <h2>10. Изменения в политике</h2>
-        <p>Мы оставляем за собой право вносить изменения в настоящую Политику конфиденциальности. Все изменения публикуются на этой странице с указанием даты последнего обновления.</p>
-
-        <div class="date">
-            <p>Дата последнего обновления: 12 августа 2025 года</p>
-        </div>
-
+        <h2><span class="num">7</span>Контакты</h2>
+        <p>
+            По вопросам, связанным с обработкой персональных данных на платформе TheVuntgram,
+            вы можете обратиться к администрации проекта через раздел поддержки внутри приложения.
+        </p>
     </div>
+
+    <footer>
+        © TheVuntgram — платформа для учащихся школ, гимназий и лицеев
+    </footer>
+
+</div>
 </body>
 </html>
