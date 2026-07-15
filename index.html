@@ -173,6 +173,18 @@
         margin: 0;
     }
 
+    a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(108,140,255,0.4);
+        transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    a:hover {
+        color: #a9c0ff;
+        border-color: #a9c0ff;
+    }
+
     footer {
         text-align: center;
         margin-top: 30px;
@@ -183,6 +195,69 @@
     @media (max-width: 600px) {
         .card { padding: 26px 22px; }
         .security-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ===== Анимации появления ===== */
+    @keyframes fadeSlideUp {
+        from { opacity: 0; transform: translateY(24px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    @keyframes popIn {
+        from { opacity: 0; transform: scale(0.94); }
+        to   { opacity: 1; transform: scale(1); }
+    }
+
+    header {
+        animation: fadeSlideUp 0.7s ease both;
+    }
+
+    .card {
+        animation: fadeSlideUp 0.8s ease 0.1s both;
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .pill, .security-item {
+        opacity: 0;
+        transform: scale(0.94);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .pill.is-visible, .security-item.is-visible {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .pill:nth-of-type(2), .security-item:nth-of-type(2) {
+        transition-delay: 0.12s;
+    }
+
+    footer {
+        animation: fadeIn 1s ease 0.3s both;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        header, .card, footer, .pill, .security-item, .reveal {
+            animation: none !important;
+            transition: none !important;
+            opacity: 1 !important;
+            transform: none !important;
+        }
     }
 </style>
 </head>
@@ -201,15 +276,18 @@
             и каким образом обеспечивается их защита.
         </p>
 
-        <h2><span class="num">1</span>Общие положения</h2>
+        <h2 class="reveal"><span class="num">1</span>Общие положения</h2>
         <p>
             TheVuntgram — закрытая социальная платформа, созданная для общения учащихся
             общеобразовательных школ, гимназий, лицеев и других учебных заведений. Платформа
             разрабатывалась с приоритетом на конфиденциальность и безопасность данных
-            несовершеннолетних и совершеннолетних пользователей из числа учащихся.
+            несовершеннолетних и совершеннолетних пользователей из числа учащихся. Используя
+            платформу, пользователь также принимает условия
+            <a href="https://polsovatel.vercel.app/" target="_blank" rel="noopener noreferrer"><strong>Пользовательского соглашения</strong></a>
+            TheVuntgram.
         </p>
 
-        <h2><span class="num">2</span>Какие данные мы <u>не</u> собираем</h2>
+        <h2 class="reveal"><span class="num">2</span>Какие данные мы <u>не</u> собираем</h2>
         <p>
             При регистрации на платформе TheVuntgram <strong>не запрашиваются и не хранятся</strong>
             следующие персональные данные:
@@ -223,7 +301,7 @@
             попадающих на сервер, к минимуму.
         </p>
 
-        <h2><span class="num">3</span>Какие данные обрабатываются</h2>
+        <h2 class="reveal"><span class="num">3</span>Какие данные обрабатываются</h2>
         <p>При использовании платформы обрабатываются следующие категории данных:</p>
         <ul>
             <li>Виртуальные данные, автоматически формируемые системой при регистрации аккаунта (внутренние идентификаторы, служебные метки профиля);</li>
@@ -231,13 +309,13 @@
             <li>Прочие данные о взаимодействии пользователя с платформой (активность внутри приложения, настройки профиля и т. п.).</li>
         </ul>
 
-        <div class="highlight">
+        <div class="highlight reveal">
             <strong>Важно:</strong> ни виртуальные данные, автоматически создаваемые при регистрации,
             ни сообщения пользователей, ни любые другие данные о пользователе
             <strong>не передаются третьим лицам</strong> ни при каких обстоятельствах.
         </div>
 
-        <h2><span class="num">4</span>Меры защиты данных</h2>
+        <h2 class="reveal"><span class="num">4</span>Меры защиты данных</h2>
         <p>Для обеспечения безопасности пользовательских данных на платформе применяются следующие меры:</p>
         <div class="security-grid">
             <div class="security-item">
@@ -250,14 +328,14 @@
             </div>
         </div>
 
-        <h2><span class="num">5</span>Кто имеет доступ к данным</h2>
+        <h2 class="reveal"><span class="num">5</span>Кто имеет доступ к данным</h2>
         <p>
             Доступ к данным пользователей ограничен исключительно техническими процессами,
             необходимыми для работы платформы. Передача данных сторонним компаниям, рекламным
             сетям, аналитическим сервисам или иным третьим лицам <strong>не осуществляется</strong>.
         </p>
 
-        <h2><span class="num">6</span>Изменения политики</h2>
+        <h2 class="reveal"><span class="num">6</span>Изменения политики</h2>
         <p>
             Поскольку проект TheVuntgram находится на стадии разработки и не зарегистрирован
             официально, данная политика конфиденциальности может дополняться и уточняться по мере
@@ -265,7 +343,7 @@
             внутри приложения.
         </p>
 
-        <h2><span class="num">7</span>Контакты</h2>
+        <h2 class="reveal"><span class="num">7</span>Контакты</h2>
         <p>
             По вопросам, связанным с обработкой персональных данных на платформе TheVuntgram,
             вы можете обратиться к администрации проекта через раздел поддержки внутри приложения.
@@ -277,5 +355,27 @@
     </footer>
 
 </div>
+
+<script>
+    (function () {
+        var targets = document.querySelectorAll('.reveal, .pill, .security-item');
+
+        if (!('IntersectionObserver' in window)) {
+            targets.forEach(function (el) { el.classList.add('is-visible'); });
+            return;
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        targets.forEach(function (el) { observer.observe(el); });
+    })();
+</script>
 </body>
 </html>
